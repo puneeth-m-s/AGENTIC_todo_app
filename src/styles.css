@@ -54,6 +54,12 @@ input:focus { border-color: #78a58e; box-shadow: 0 0 0 3px #36765d17; }
 .add-symbol { padding-left: 8px; color: #8a968d; font-size: 19px; }
 .add-form input { height: 38px; min-width: 0; padding: 0; background: transparent; border: 0; box-shadow: none; font-size: 13px; }
 .add-button { height: 38px; padding: 0 17px; white-space: nowrap; font-size: 12px; }
+.search-box { display: flex; align-items: center; gap: 10px; height: 42px; margin-top: 12px; padding: 0 12px; background: #fff; border: 1px solid #e8ebe6; border-radius: 9px; }
+.search-symbol { color: #849087; font-size: 22px; line-height: 1; transform: rotate(-20deg); }
+.search-box input { height: 38px; min-width: 0; padding: 0; background: transparent; border: 0; box-shadow: none; font-size: 12px; }
+.search-box input::-webkit-search-cancel-button { display: none; }
+.clear-search { width: 26px; height: 26px; padding: 0; color: #858e87; background: transparent; border: 0; border-radius: 6px; font-size: 19px; }
+.clear-search:hover { color: #bd6258; background: #fbf0ee; }
 .list-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 24px 0 13px; }
 .filter-tabs { display: flex; gap: 5px; }
 .filter-tab { padding: 7px 12px; color: #888e89; background: transparent; border: 0; border-radius: 7px; font-size: 11px; font-weight: 600; }
@@ -62,12 +68,17 @@ input:focus { border-color: #78a58e; box-shadow: 0 0 0 3px #36765d17; }
 .remaining-count { color: #989e98; font-size: 11px; }
 .remaining-count strong { color: #58615a; font-weight: 700; }
 .todo-list { min-height: 195px; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.todo-row { min-height: 57px; display: flex; align-items: center; gap: 13px; border-bottom: 1px solid var(--line); }
+.todo-row { min-height: 57px; display: flex; align-items: center; gap: 13px; padding: 9px 0; border-bottom: 1px solid var(--line); }
 .check-button { width: 19px; height: 19px; flex: 0 0 19px; display: grid; place-items: center; padding: 0; color: #fff; background: #fff; border: 1.5px solid #d7ddd7; border-radius: 50%; font-size: 11px; transition: background .15s, border-color .15s; }
 .check-button:hover { border-color: #78a58e; }
 .is-completed .check-button { background: #6d9b80; border-color: #6d9b80; }
 .todo-text { flex: 1; color: #424942; font-size: 13px; overflow-wrap: anywhere; }
 .is-completed .todo-text { color: #a6aca7; text-decoration: line-through; }
+.progress-control { width: 178px; flex: 0 0 178px; display: flex; align-items: center; gap: 10px; }
+.progress-track { height: 5px; flex: 1; overflow: hidden; background: #edf0ec; border-radius: 5px; }
+.progress-track span { display: block; height: 100%; background: #6d9b80; border-radius: inherit; transition: width .2s ease; }
+.progress-select { width: 91px; height: 30px; padding: 0 6px; color: #546258; background: #f8faf7; border: 1px solid #e5eae4; border-radius: 7px; outline: none; font-size: 10px; }
+.progress-select:focus { border-color: #78a58e; box-shadow: 0 0 0 3px #36765d17; }
 .delete-button { width: 30px; height: 30px; color: #a9aea9; background: transparent; border: 0; border-radius: 6px; font-size: 20px; opacity: 0; transition: opacity .15s, background .15s, color .15s; }
 .todo-row:hover .delete-button, .delete-button:focus-visible { opacity: 1; }
 .delete-button:hover { color: #bd6258; background: #fbf0ee; }
@@ -89,6 +100,8 @@ input:focus { border-color: #78a58e; box-shadow: 0 0 0 3px #36765d17; }
   .date-chip { margin-top: 14px; padding: 8px 9px; font-size: 9px; white-space: nowrap; }
   .add-form { gap: 6px; }
   .add-button { padding: 0 11px; font-size: 11px; }
+  .progress-control { width: 148px; flex-basis: 148px; gap: 7px; }
+  .progress-select { width: 84px; }
   .list-toolbar { padding-top: 20px; }
   .filter-tab { padding: 7px 9px; }
   .card-footer { margin: 0 -22px; }
